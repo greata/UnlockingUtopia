@@ -1,0 +1,5 @@
+{
+    "sharedPath": "/../Client",
+    "port": "5000",
+    "logLevel": "warn"
+}

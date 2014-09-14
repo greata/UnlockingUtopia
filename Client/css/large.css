@@ -1,0 +1,31 @@
+#page-home #callout-background{
+    background-size: 100% !important;
+}
+
+#page-home #callout{
+    padding-top: 30%;
+}
+
+#page-home #callout h2{
+    font-size: 48px;
+}
+
+#page-home #callout h3{
+    font-size: 38px;
+}
+
+#small-map{
+    height: 500px;
+}
+
+#page-post .ui-content{
+    margin: 0 25%;
+}
+
+#page-search .ui-content{
+    margin: 0 25%;
+}
+
+#page-map #map{
+    height: 700px;
+}

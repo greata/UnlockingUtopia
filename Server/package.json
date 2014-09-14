@@ -1,0 +1,18 @@
+{
+  "name": "spot-map",
+  "version": "0.0.1",
+  "description": "Crowd sourced information about global weapons trade",
+  "main": "server.js",
+  "dependencies": {
+    "express": "3.4.8",
+    "mongoose": "3.8.x",
+    "socket.io": "0.9.16",
+    "jade": "1.1.5",
+    "winston": "0.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Dan-Tee/BulletMap.git"
+  },
+  "homepage": "https://github.com/Dan-Tee/BulletMap"
+}

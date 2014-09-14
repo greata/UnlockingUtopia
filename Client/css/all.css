@@ -1,0 +1,231 @@
+/* Hide all content so that it is not shown when JavaScript is disabled.
+Then use JavaScript to show it.*/
+[data-role="page"]
+{
+    display: none;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ui-btn-active {
+    color: #222 !important;
+    text-shadow: 0 0 !important;
+    background-color: #e7e7e7 !important;
+    box-shadow: 2px 2px 2px #bbb inset;
+    border: none;
+}
+
+#page-demo-warning{
+    color: darkred;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#page-demo-warning a{
+    width: 200px;
+    margin: 0 auto;
+}
+
+#page-home .ui-content{
+    padding: 0 !important;
+}
+
+#page-pdf .createPDF{
+	background: url(../images/printoutpdf.png) no-repeat top center;
+}
+#page-home #callout-background{
+    background: url(../images/paradise.png) no-repeat top center;
+}
+
+#page-home #callout{
+    padding-top: 40%;
+    padding-bottom: 10%;
+}
+
+#page-home #callout h2{
+    padding-left: 10%;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0;
+    margin-bottom: 5px;
+}
+
+#page-home #callout h3{
+    padding-left: 10%;
+    font-size: 28px;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0 0;
+    margin-top: 5px;
+}
+
+#home-carat{
+    margin: 0 auto;
+    width: 18px;
+    display: block;
+}
+
+#text-anchor{
+    height: 10px;
+    display: block;
+}
+
+#page-home p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#page-search .ui-content{
+    padding: 0;
+}
+
+#search-input {
+    margin: 0 20px;
+}
+
+#page-search hr{
+    margin-top: 25px;
+}
+
+#img-titles{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#search-result-template{
+    display: none;
+}
+
+#page-post #coordinates{
+    display: none;
+}
+
+#page-post h2, label{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#small-map{
+    border: 1px solid #aaa;
+    height: 300px;
+    margin: 15px -16px;
+}
+
+#page-map .ui-content{
+    padding: 0;
+}
+
+#legend{
+    margin: 15px 0 5px 20px;
+}
+
+#legend h3{
+    display: inline;
+    font-size: 24px;
+}
+
+#legend ul{
+    display: inline;
+    padding-left: 0;
+    margin: 0;
+}
+
+#legend li{
+    display: inline;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#btn-filter{
+    display: inline;
+    margin: 0 10px;
+    width: auto;
+    padding: 5px;
+    float: right;
+    background-color: #f4f4f4;
+}
+
+#filter-popup{
+    min-width: 300px;
+    padding: 5px;
+}
+
+#map{
+    height: 350px;
+}
+
+#btn-filter span{
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+#btn-filter img{
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+span.clear {
+    clear: right;
+    display: block;
+}
+
+.maps:after {
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 0 5px #666;
+    width:100%;
+    height:100%;
+    display:block;
+    opacity: 0.7;
+}
+
+.error-message {
+    border-color: #7E0000 !important;
+    background-color: darkred !important;
+
+}
+
+.error-message p{
+    color: #E8E8E8;
+    text-shadow: none;
+    font-size: 18px;
+}
+
+input.error {
+    border: 1px solid #C00;
+}
+
+label {
+    margin-top: 20px;
+}
+
+#upload {
+    margin-top: 60px;
+}
+
+.headline-background {
+    background: url(../images/title.jpg) no-repeat ;
+    background-size: 100%;
+    text-align: center;
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+    font-size: 8px;
+    color: #fff;
+    text-shadow: 0 0;
+}
+
+.headline-background h1{
+    margin: 0;
+}

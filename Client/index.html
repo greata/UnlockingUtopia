@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unlocking Utopia</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="libs/jquery.mobile-1.4.0.min.css" />
+    <!--link rel="stylesheet" href="libs/leaflet.css" /-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="css/imports.css" />
+    <script type="text/javascript" src="js/cordova.js"></script>
+    <script src="libs/jquery.min.js" ></script>
+    <script src="libs/jquery.mobile-1.4.0.min.js"></script>
+    <script src="libs/jquery.mustache.js"></script>
+    <script src="libs/tinycolor-min.js"></script>
+    <script src="libs/leaflet-src.js"></script>
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur210ynq%2Ca0%3Do5-90yaqw"></script>
+    <!-- http://developer.mapquest.com/web/documentation/plugins/leaflet/v1.0/map -->
+    <!-- script src="http://beta.mapquestapi.com/sdk/leaflet/v0.1/mq-map.js?key=Fmjtd%7Cluur210ynq%2Ca0%3Do5-90yaqw"></script -->
+    <!--http://www.mapquestapi.com/sdk/js/v7.0.s/mqa.toolkit.js?key=    -->
+    <script src="js/map_util.js"></script>
+    <script src="js/click_handlers.js" defer></script>
+    <script src="js/small_map.js" defer></script>
+    <script src="js/map_with_markers.js" defer></script>
+    <script src="js/init.js" defer></script>
+    </head>
+<body>
+
+<noscript>
+    <h1>
+        JavaScript must be enabled in your browser for this site to work.
+    </h1>
+</noscript>
+
+<!--------------------------- HOME ------------------------------------>
+<div data-role="page" id="page-home">
+    <div data-role="header">
+        <div class="headline-background">
+            <h1>Unlocking Utopia</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-home" data-icon="home" class="ui-state-persist">Home</a></li>
+                <li><a href="#page-post" data-icon="plus">Spot</a></li>
+                <li><a href="#page-map" data-icon="location">Map</a></li>
+                <li><a href="#page-howto" data-icon="star">HowTo </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+    <img alt="" src="../images/paradise.png" style=" display: block;  margin-left: auto; margin-right: auto;" >
+<!--         <div id="callout-background">
+            <div id="callout">
+                <h2>
+                    Want a garden?
+                </h2>
+                <h3>
+                    We help you!
+                </h3>
+                <a id="home-carat-a" href="#text-anchor">
+                    <img id="home-carat" src="libs/images/icons-svg/carat-d-white.svg">
+                </a>
+            </div>
+        </div> -->
+     </div>
+</div>
+<!-- PDF -->
+<div data-role="page" id="page-pdf">
+    <div data-role="header">
+        <div class="headline-background">
+            <h1>Unlocking Utopia</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-home" data-icon="home">Home</a></li>
+                <li><a href="#page-post" data-icon="plus">Spot</a></li>
+                <li><a href="#page-map" data-icon="location">Map</a></li>
+                <li><a href="#page-howto" data-icon="star">HowTo </a></li>
+            </ul>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+    <div class="createPDF"></div>
+    <img src="images/printoutpdf.png" style=" display: block;  margin-left: auto; margin-right: auto;">
+        
+     </div>
+</div>
+
+<!--  -->
+<!--------------------------- Post ------------------------------------>
+<div data-role="page" id="page-post">
+    <div data-role="header">
+        <div class="headline-background">
+            <h1>Unlocking Utopia</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+               	<li><a href="#page-home" data-icon="home">Home</a></li>
+                <li><a href="#page-post" data-icon="plus" class="ui-state-persist">Spot</a></li>
+                <li><a href="#page-map" data-icon="location">Map</a></li>
+                <li><a href="#page-howto" data-icon="star">HowTo </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <div data-role="popup" class="error-message">
+        </div>
+
+        <h2>Post a garden location</h2>
+        <form>
+            <label for="title-post">Title</label>
+            <input name="title" id="title-post" value="" type="text">
+
+            <label for="title-post">Description</label>
+            <textarea name="description" id="description-post" rows="3"></textarea>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Status:</legend>
+                <input name="status" id="radio-choice-h-2a" value="new" checked="checked" type="radio">
+                <label for="radio-choice-h-2a">New</label>
+                <input name="status" id="radio-choice-h-2b" value="in_progress" type="radio">
+                <label for="radio-choice-h-2b">In Progress</label>
+                <input name="status" id="radio-choice-h-2c" value="open" type="radio">
+                <label for="radio-choice-h-2c">Open</label>
+            </fieldset>
+
+            <div id="coordinates">
+                <label for="latitude">Latitude</label>
+                <input name="latitude" id="latitude" value="" type="text">
+
+                <label for="longitude">Longitude</label>
+                <input name="longitude" id="longitude" value="" type="text">
+            </div>
+            <label for="photo-file">Photo</label>
+            <input name="photo-file" id="photo-file" value="" type="file" accept="image/*">
+        </form>
+
+        <div id="small-map" class="maps"></div>
+        <button id="btn-post" data-icon="plus" class="ui-shadow ui-corner-all">Post</button>
+    </div>
+</div>
+
+<!--------------------------- Map ------------------------------------>
+<div data-role="page" id="page-map">
+
+    <div data-role="header">
+        <div class="headline-background">
+            <h1>Unlocking Utopia</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-home" data-icon="home">Home</a></li>
+                <li><a href="#page-post" data-icon="plus">Spot</a></li>
+                <li><a href="#page-map" data-icon="location" class="ui-state-persist">Map</a></li>
+                <li><a href="#page-howto" data-icon="star">HowTo </a></li>
+            </ul>
+        </div>
+    </div>
+
+	<div>
+	    <ul data-role="listview" data-inset="true">
+            <li><a href="#page-pdf">Show printout pdf</a></li>
+        </ul>
+	</div>
+    <div role="main" class="ui-content">
+    <!--
+    <div id="legend">
+        <h3>Origin Colors:</h3>
+        <ul></ul>
+        <button id="btn-filter">
+            <img src="images/filter_gray.svg">
+            <span>Filter findings</span>
+        </button>
+        <div id="filter-popup" data-role="popup" data-position-to="#btn-filter" data-arrow="t" data-overlay-theme="b">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+            <div data-role="collapsible">
+                <h4>Show only top origins</h4>
+                <label for="top-filter">Top:</label>
+                <input type="range" name="top-filter" id="top-filter" min="0" max="20" value="5">
+            </div>
+            <div data-role="collapsible">
+                <h4>Show only new entries</h4>
+                <label for="date-filter">Show only entries newer than:</label>
+                <input type="date" name="date-filter" id="date-filter">
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+    -->
+
+        <div id="map" class="maps"></div>
+        <div id="paneldiv" class="olControlNavToolbar"></div>
+    </div>
+</div>
+
+<!--------------------------- HOWTO ------------------------------------>
+<div data-role="page" id="page-howto">
+    <div data-role="header">
+        <div class="headline-background">
+            <h1>Unlocking Utopia</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-home" data-icon="home">Home</a></li>
+                <li><a href="#page-post" data-icon="plus">Spot</a></li>
+                <li><a href="#page-map" data-icon="location">Map</a></li>
+                <li><a href="#page-howto" data-icon="star" class="ui-state-persist">HowTo </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <form>
+            <label for="search-1">Search:</label>
+            <input name="search-1" id="search-1" value="" type="search">
+        </form>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Plants</a></li>
+            <li><a href="#">Burocracy</a></li>
+            <li><a href="#">Success Stories</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
