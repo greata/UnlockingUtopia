@@ -24,7 +24,7 @@ Installation Guide
 2. Run the server
 node ./Server/server.js
 3. Configure Server
-Go to \Server\config.example.json and rename it to \Server\config.json. Change the port or log level, if you like inside the config.json.
-4. Access page via your browser by entering the URL.
+Go to ./Server/config.example.json and rename it to ./Server/config.json. Change the port or log level, if you like inside the config.json.
+4. Access page via your browser on localhost with the port number you configured, e.g.
 http://localhost:5000/
-5. Create Phonegap/Cordova app (http://docs.phonegap.com/, http://cordova.apache.org/) and use Shared as the app's www-directory.
+5. Create Phonegap/Cordova app (http://docs.phonegap.com/, http://cordova.apache.org/) and use ./Client as the app's www-directory.
